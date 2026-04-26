@@ -1,0 +1,16 @@
+version: v3
+
+teleport:
+  nodename: teleport-demo
+
+auth_service:
+  enabled: true
+  cluster_name: teleport-demo
+  listen_addr: 0.0.0.0:3025
+
+proxy_service:
+  enabled: true
+  web_listen_addr: 0.0.0.0:3080
+
+ssh_service:
+  enabled: true
