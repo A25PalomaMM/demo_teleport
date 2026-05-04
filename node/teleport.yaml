@@ -1,0 +1,23 @@
+version: v3
+
+teleport:
+  nodename: teleport-node
+  data_dir: /var/lib/teleport
+
+  # Token generado en el auth server
+  auth_token: "node:9435bd01e73ada4393f0b3727f3174b0"
+
+  # nombre del servicio en docker-compose
+  auth_servers:
+    - "teleport-server:3025"
+
+auth_service:
+  enabled: false
+
+proxy_service:
+  enabled: false
+
+ssh_service:
+  enabled: true
+  labels:
+    env: demo
