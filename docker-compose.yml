@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+
+  teleport-server:
+    build: ./server
+    container_name: teleport-server
+    hostname: teleport-server
+    networks:
+      - teleport-net
+    ports:
+      - "3080:3080"   # Web UI
+      - "3025:3025"   # Auth
+    volumes:
+      - teleport-server-data:/var/lib/teleport
+    restart: unless-stopped
+
+  teleport-node:
+    build: ./node
+    container_name: teleport-node
+    hostname: teleport-node
+    networks:
+      - teleport-net
+    depends_on:
+      - teleport-server
+    volumes:
+      - teleport-node-data:/var/lib/teleport
+    restart: unless-stopped
+
+networks:
+  teleport-net:
+    driver: bridge
+
+volumes:
+  teleport-server-data:
+  teleport-node-data:
