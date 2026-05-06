@@ -1,0 +1,1 @@
+Se intentó este escenario, pero después de que los contenedores se iniciaran y estuvieran corriendo activos correctamente, los nodos no se llegaban a añadir al cluster a pesar de configurar los yaml, por lo que se decidió no continuar con esta propuesta.

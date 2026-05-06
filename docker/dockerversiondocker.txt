@@ -1,1 +1,0 @@
-ficheros para version docker. se intentó este escenario, pero después de que los contenedores se iniciaran y estuvieran activos, los nodos no se llegaban a añadir al cluster a pesar de configurar los yaml y se decidió no continuar.
