@@ -5,11 +5,12 @@ teleport:
   data_dir: /var/lib/teleport
 
   # Token generado en el auth server
-  auth_token: "node:9435bd01e73ada4393f0b3727f3174b0"
+  auth_token: "node:token_auth_server" # añadir despues de solicitarlo en server
 
   # nombre del servicio en docker-compose
   auth_server: "teleport-server:3025"
 
+# desactivado porque es un nodo y no actua como servidor autenticacion
 auth_service:
   enabled: false
 
