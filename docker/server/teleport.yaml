@@ -1,0 +1,17 @@
+version: v3
+
+teleport:
+  nodename: teleport-server
+  data_dir: /var/lib/teleport
+
+auth_service:
+  enabled: true
+  cluster_name: teleport-demo
+  listen_addr: 0.0.0.0:3025
+
+proxy_service:
+  enabled: true
+  web_listen_addr: 0.0.0.0:3080
+
+ssh_service:
+  enabled: false # Teleport no va a ser un nodo,tiene rol de servicio de autenticacion y proxy
