@@ -13,5 +13,6 @@ proxy_service:
   enabled: true
   web_listen_addr: 0.0.0.0:3080
   public_addr: teleport-server:3080
+  
 ssh_service:
-  enabled: false # Teleport no va a ser un nodo,tiene rol de servicio de autenticacion y proxy
+  enabled: false # Teleport no va a ser un nodo, tiene rol de servicio de autenticacion y proxy
